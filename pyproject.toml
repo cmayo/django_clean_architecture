@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["Carlos Mayo <carlos.mayo@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.4"
+django-ninja = "^1.1.0"
+uvicorn = "^0.29.0"
+python-decouple = "^3.8"
+psycopg = "^3.1.19"
+python-jose = "^3.3.0"
+passlib = "^1.7.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pydevd-pycharm = "^241.15989.57"
+pytest = "^8.1.1"
+mypy = "^1.9.0"
+ruff = "^0.4.2"
+pytest-django = "^4.8.0"
+django-types = "^0.19.1"
+types-python-jose = "^3.3.4.20240106"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
